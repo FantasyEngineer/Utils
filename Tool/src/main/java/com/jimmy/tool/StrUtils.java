@@ -13,30 +13,17 @@ import androidx.annotation.StringRes;
  *     desc  : utils about string
  * </pre>
  */
-public final class StringUtils {
+public final class StrUtils {
 
-    private StringUtils() {
+    private StrUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");
     }
 
     /**
-     * Return whether the string is null or 0-length.
-     *
-     * @param s The string.
-     * @return {@code true}: yes<br> {@code false}: no
+     * 返回字符串是否为空
      */
-    public static boolean isEmpty(final CharSequence s) {
-        return s == null || s.length() == 0;
-    }
-
-    /**
-     * Return whether the string is null or whitespace.
-     *
-     * @param s The string.
-     * @return {@code true}: yes<br> {@code false}: no
-     */
-    public static boolean isTrimEmpty(final String s) {
-        return (s == null || s.trim().length() == 0);
+    public static boolean isEmpty(final String s) {
+        return s == null || s.trim().length() == 0;
     }
 
     /**
