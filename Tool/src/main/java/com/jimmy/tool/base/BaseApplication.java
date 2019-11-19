@@ -11,7 +11,6 @@ import com.jimmy.tool.LogUtils;
 
 import java.util.ArrayList;
 
-import leakcanary.LeakCanary;
 
 /**
  * 基础application
@@ -24,8 +23,7 @@ public class BaseApplication extends Application {
         return sInstance;
     }
 
-    private Boolean isDebug;
-    private Boolean isMainProcess;
+    private Boolean isDebug = true;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -37,7 +35,9 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
-//        DoraemonKit.install(this);
+        if (isDebug()) {
+            DoraemonKit.install(this);
+        }
         initLog();
         initCrash();
     }
