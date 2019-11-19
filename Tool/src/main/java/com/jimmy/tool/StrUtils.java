@@ -6,12 +6,7 @@ import androidx.annotation.ArrayRes;
 import androidx.annotation.StringRes;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/08/16
- *     desc  : utils about string
- * </pre>
+ * 字符串相关判断
  */
 public final class StrUtils {
 
@@ -25,6 +20,14 @@ public final class StrUtils {
     public static boolean isEmpty(final String s) {
         return s == null || s.trim().length() == 0;
     }
+
+    /**
+     * 返回字符串不为空
+     */
+    public static boolean isNotEmpty(final String s) {
+        return !isEmpty(s);
+    }
+
 
     /**
      * Return whether the string is null or white space.
@@ -97,7 +100,7 @@ public final class StrUtils {
     }
 
     /**
-     * Set the first letter of string upper.
+     * 将第一个字符大写
      *
      * @param s The string.
      * @return the string with first letter upper.
@@ -109,7 +112,7 @@ public final class StrUtils {
     }
 
     /**
-     * Set the first letter of string lower.
+     * 将第一个字符小写
      *
      * @param s The string.
      * @return the string with first letter lower.
@@ -121,7 +124,7 @@ public final class StrUtils {
     }
 
     /**
-     * Reverse the string.
+     * 字符串翻转
      *
      * @param s The string.
      * @return the reverse string.
@@ -184,7 +187,7 @@ public final class StrUtils {
     }
 
     /**
-     * Return the string value associated with a particular resource ID.
+     * 根据res获取string
      *
      * @param id The desired resource identifier.
      * @return the string value associated with a particular resource ID.
