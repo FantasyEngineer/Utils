@@ -1,25 +1,16 @@
 package com.jimmy.utils;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.os.HandlerThread;
-import android.text.Layout;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.jimmy.tool.ClipboardUtils;
 import com.jimmy.tool.ColorUtils;
-import com.jimmy.tool.HttpsUtil;
-import com.jimmy.tool.LogUtils;
 import com.jimmy.tool.SnackbarUtils;
-import com.jimmy.tool.StrUtils;
 import com.jimmy.tool.ToastUtils;
-
-import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,27 +45,15 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.show).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                LogUtils.d(ClipboardUtils.getText());
                 View snackBarRootView = findViewById(android.R.id.content);
-//                SnackbarUtils.with(snackBarRootView)
-//                        .setMessage("nihao")
-//                        .setBgColor(ColorUtils.getRandomColor(false))
-//                        .setDuration(SnackbarUtils.LENGTH_LONG)
-//                        .show();
                 SnackbarUtils.with(snackBarRootView)
-                        .setMessage("这是一个snack")
-                        .setMessageColor(Color.WHITE)
-                        .setDuration(SnackbarUtils.LENGTH_INDEFINITE)
-                        .setAction("dianji", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                LogUtils.d("123123123");
-                            }
-                        }).show();
+                        .setMessage("nihao")
+                        .setBgColor(ColorUtils.getRandomColor(true))
+                        .setDuration(SnackbarUtils.LENGTH_LONG)
+                        .show();
 
             }
         });
-
 
     }
 }

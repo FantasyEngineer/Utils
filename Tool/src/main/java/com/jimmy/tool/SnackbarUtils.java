@@ -6,6 +6,7 @@ import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
@@ -308,4 +309,5 @@ public final class SnackbarUtils {
             layout.addView(child, params);
         }
     }
+
 }

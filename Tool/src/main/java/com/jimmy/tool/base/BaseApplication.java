@@ -42,7 +42,7 @@ public class BaseApplication extends Application {
         initCrash();
     }
 
-    // init it in ur application
+    //debug的时候会展示
     public void initLog() {
         LogUtils.Config config = LogUtils.getConfig()
                 .setLogSwitch(isDebug())// 设置 log 总开关，包括输出到控制台和文件，默认开
@@ -74,13 +74,7 @@ public class BaseApplication extends Application {
     }
 
     private void initCrash() {
-//        CrashUtils.init(new CrashUtils.OnCrashListener() {
-//            @Override
-//            public void onCrash(String crashInfo, Throwable e) {
-//                LogUtils.e(crashInfo);
-//                AppUtils.relaunchApp();
-//            }
-//        });
+
     }
 
     private boolean isDebug() {
@@ -88,8 +82,4 @@ public class BaseApplication extends Application {
         return isDebug;
     }
 
-//    public boolean isMainProcess() {
-//        if (isMainProcess == null) isMainProcess = ProcessUtils.isMainProcess();
-//        return isMainProcess;
-//    }
 }
