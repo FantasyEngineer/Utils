@@ -35,9 +35,9 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
-        if (isDebug()) {
-            DoraemonKit.install(this);
-        }
+//        if (isDebug()) {
+//            DoraemonKit.install(this);
+//        }
         initLog();
         initCrash();
     }
